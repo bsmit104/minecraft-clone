@@ -122,13 +122,25 @@ public class SimpleUI : MonoBehaviour
         GameObject crosshair = new GameObject("Crosshair");
         crosshair.transform.SetParent(mainCanvas.transform, false);
         
-        Image crosshairImg = crosshair.AddComponent<Image>();
-        crosshairImg.color = new Color(1, 1, 1, 0.5f);
-        
-        RectTransform crosshairRect = crosshair.GetComponent<RectTransform>();
-        crosshairRect.anchorMin = new Vector2(0.5f, 0.5f);
-        crosshairRect.anchorMax = new Vector2(0.5f, 0.5f);
-        crosshairRect.sizeDelta = new Vector2(3, 3);
+        // Create vertical line of plus
+        GameObject verticalLine = new GameObject("Vertical");
+        verticalLine.transform.SetParent(crosshair.transform, false);
+        Image verticalImg = verticalLine.AddComponent<Image>();
+        verticalImg.color = new Color(0, 0, 0, 1f);
+        RectTransform verticalRect = verticalLine.GetComponent<RectTransform>();
+        verticalRect.anchorMin = new Vector2(0.5f, 0.5f);
+        verticalRect.anchorMax = new Vector2(0.5f, 0.5f);
+        verticalRect.sizeDelta = new Vector2(2, 12);
+
+        // Create horizontal line of plus
+        GameObject horizontalLine = new GameObject("Horizontal"); 
+        horizontalLine.transform.SetParent(crosshair.transform, false);
+        Image horizontalImg = horizontalLine.AddComponent<Image>();
+        horizontalImg.color = new Color(0, 0, 0, 1f);
+        RectTransform horizontalRect = horizontalLine.GetComponent<RectTransform>();
+        horizontalRect.anchorMin = new Vector2(0.5f, 0.5f);
+        horizontalRect.anchorMax = new Vector2(0.5f, 0.5f);
+        horizontalRect.sizeDelta = new Vector2(12, 2);
         
         // Create block info text
         GameObject blockInfo = new GameObject("Block Info");
