@@ -155,9 +155,9 @@ MonoBehaviour:
   terrainScale: 20
   terrainHeight: 20
   dirtLayerDepth: 3
-  grassBlock: {fileID: 0}
-  dirtBlock: {fileID: 0}
-  stoneBlock: {fileID: 0}
+  grassBlock: {fileID: 6575959397322049691, guid: 724d0c1d7122e084a8568bca822bcfea, type: 3}
+  dirtBlock: {fileID: 1917555281285607737, guid: 06083cd2652f41a42afe47f594e8a1fb, type: 3}
+  stoneBlock: {fileID: 5741614547654348038, guid: 57bcc23ba5b64bc44a92a6824a3aa94c, type: 3}
   bedrockBlock: {fileID: 0}
   generateOnStart: 1
   maxBlocksPerFrame: 1000
@@ -821,6 +821,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5462144072186091788
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2602026426930248924, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -52.202652
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602026426930248924, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602026426930248924, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -155.44278
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602026426930248924, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602026426930248924, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602026426930248924, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602026426930248924, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -4.4705525e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602026426930248924, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602026426930248924, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602026426930248924, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411355304710596198, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
+      propertyPath: m_Name
+      value: dirtCube
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d160c69cfaa0f64396bec263eb3a270, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -831,3 +888,4 @@ SceneRoots:
   - {fileID: 1563588365}
   - {fileID: 732586915}
   - {fileID: 775202560}
+  - {fileID: 5462144072186091788}
