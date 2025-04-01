@@ -483,6 +483,7 @@ GameObject:
   - component: {fileID: 1525759801}
   - component: {fileID: 1525759800}
   - component: {fileID: 1525759803}
+  - component: {fileID: 1525759804}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -505,13 +506,14 @@ MonoBehaviour:
   walkSpeed: 5
   runSpeed: 10
   jumpForce: 5
-  gravity: 0
+  gravity: -20
   mouseSensitivity: 2
   verticalLookLimit: 80
   interactionDistance: 5
   interactionLayer:
     serializedVersion: 2
     m_Bits: 8
+  blockHighlight: {fileID: 0}
 --- !u!143 &1525759801
 CharacterController:
   m_ObjectHideFlags: 0
@@ -569,6 +571,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldGenerator: {fileID: 45194422}
   heightAboveGround: 2
+  maxHeight: 100
+  searchRadius: 10
+--- !u!114 &1525759804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525759799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff249dde1fa5b7043b5ecc4f5fde225e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - blockType: 0
+    count: 0
+    blockPrefab: {fileID: 0}
+  - blockType: 0
+    count: 0
+    blockPrefab: {fileID: 0}
+  - blockType: 0
+    count: 0
+    blockPrefab: {fileID: 0}
+  selectedSlot: 0
+  maxStackSize: 64
 --- !u!1 &1563588361
 GameObject:
   m_ObjectHideFlags: 0

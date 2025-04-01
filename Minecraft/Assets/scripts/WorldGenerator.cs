@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class WorldGenerator : MonoBehaviour
 {
+    public enum BlockType
+    {
+        Air,
+        Grass,
+        Dirt,
+        Stone,
+        Bedrock
+    }
+    
     [Header("World Settings")]
     public int worldSizeX = 16;    // Size in chunks
     public int worldSizeZ = 16;
@@ -30,6 +39,9 @@ public class WorldGenerator : MonoBehaviour
     private Dictionary<Vector2Int, GameObject> chunks = new Dictionary<Vector2Int, GameObject>();
     private Queue<BlockData> blockQueue = new Queue<BlockData>();
     private HashSet<Vector3Int> blockSet = new HashSet<Vector3Int>();
+    private bool isGenerating = false;
+    
+    public bool IsGenerating => isGenerating;
     
     // Struct to hold block data in queue
     private struct BlockData
@@ -75,6 +87,7 @@ public class WorldGenerator : MonoBehaviour
     
     IEnumerator GenerateWorld()
     {
+        isGenerating = true;
         Debug.Log("Starting world generation");
         
         // Get player chunk position
@@ -208,6 +221,7 @@ public class WorldGenerator : MonoBehaviour
         
         blockSet.Clear();
         Debug.Log($"World generation complete! Created {totalCreated} blocks");
+        isGenerating = false;
     }
     
     GameObject GetBlockPrefab(BlockType type)
@@ -244,15 +258,6 @@ public class WorldGenerator : MonoBehaviour
         DontDestroyOnLoad(cube); // Prevent it from being destroyed
         
         return cube;
-    }
-    
-    public enum BlockType
-    {
-        Air,
-        Grass,
-        Dirt,
-        Stone,
-        Bedrock
     }
     
     // Debug gizmos to visualize the world bounds
